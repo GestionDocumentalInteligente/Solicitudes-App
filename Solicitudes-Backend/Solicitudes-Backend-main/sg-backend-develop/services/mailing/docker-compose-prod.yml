@@ -1,0 +1,11 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mailing
+    environment:
+      STAGE: prod
+    ports:
+      - "8081:8080"
+    restart: always

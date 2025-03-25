@@ -1,0 +1,10 @@
+DOMICILIO DECLARADO Y ACREDITACIÓN DE TITULARIDAD O LEGITIMACIÓN 
+En el marco del presente expediente, declaro que el domicilio del inmueble objeto de la solicitud de Aviso de Obra es el siguiente:
+
+Calle {street}, numeración {number}, del Partido de San Isidro, identificado bajo el Número de ABL {ablNumber}.
+
+Asimismo, en mi calidad de ocupante o inquilino actual del inmueble, autorizado por el titular del mismo, en el día de la fecha, acompaño la siguiente documentación destinada a acreditar legitimación suficiente para el presente trámite:
+1. Un documento que acredita la titularidad de un inmueble (sea este un Título de Propiedad o un Informe de Dominio expedido por el Registro de la Propiedad de la Provincia de Buenos Aires, según corresponda), incorporado a estas actuaciones como GEDO N° {ifNumberTitle}.
+2. Autorización del titular de dominio del inmueble para la realización de los trabajos solicitados, incorporado a estas actuaciones como GEDO N° {ifNumberAuth}.
+
+Por último, tomo conocimiento de que la información y documentación presentada será verificada a efectos de garantizar el cumplimiento de los requisitos del presente trámite y declaro que lo aportado es preciso y auténtico, asumiendo total responsabilidad por su veracidad.

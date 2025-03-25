@@ -1,0 +1,85 @@
+version: "3.8"
+
+services:
+  api-mailing:
+    build:
+      context: ./mailing
+      dockerfile: Dockerfile
+    container_name: mailing
+    env_file:
+      - ./mailing/.env
+    ports:
+      - "8081:8080"
+    depends_on:
+      - mailhog
+      - db
+    networks:
+      - app_network
+
+  api-users:
+    build:
+      context: ./users
+      dockerfile: Dockerfile
+    container_name: users
+    env_file:
+      - ./users/.env
+    ports:
+      - "8090:8080"
+    depends_on:
+      - db
+    networks:
+      - app_network
+
+  api-auth:
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    container_name: auth
+    env_file:
+      - ./auth/.env
+    ports:
+      - "8080:8080"
+
+  db:
+    image: postgres:15
+    container_name: local_postgres
+    environment:
+      POSTGRES_USER: tq
+      POSTGRES_PASSWORD: tq
+      POSTGRES_DB: auth
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./users/config/postgres-init:/docker-entrypoint-initdb.d
+    networks:
+      - app_network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+    profiles:
+      - local
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: "mailhog"
+    env_file:
+      - ./mailing/.env
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    restart: on-failure
+    networks:
+      - app_network
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+    profiles:
+      - local
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  db_data:

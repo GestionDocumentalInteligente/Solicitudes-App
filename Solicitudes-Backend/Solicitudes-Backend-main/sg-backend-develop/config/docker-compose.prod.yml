@@ -1,0 +1,87 @@
+services:
+  sg_requests:
+    container_name: "sg_requests"
+    build:
+      context: ..
+      dockerfile: config/Dockerfile.prod
+    image: "sg_requests:${APP_VERSION}"
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "${REQUESTS_WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+    environment:
+      - FILE_MANAGER_HOST=http://sg_file_manager:8080
+      - MAILING_HOST=http://mailing:8080
+      - BUILDING_FILES=/app/services/requests/cmd/main.go
+      - APP_NAME=sg_requests
+    networks:
+      - app-network
+    restart: always
+    profiles:
+      - sg_backend
+    command: ./sg_requests
+
+  sg_file_manager:
+    container_name: "sg_file_manager"
+    build:
+      context: ../services/file-manager
+      dockerfile: Dockerfile
+    ports:
+      - "8088:8080"
+    networks:
+      - app-network
+    restart: always
+    profiles:
+      - sg_backend
+
+  mailing:
+    container_name: "mailing"
+    build:
+      context: ../services/mailing
+      dockerfile: Dockerfile
+    environment:
+      STAGE: prod
+    ports:
+      - "8081:8080"
+    networks:
+      - app-network
+    restart: always
+    profiles:
+      - sg_backend
+    env_file:
+      - ../services/mailing/.env
+
+  auth:
+    build:
+      context: ../services/auth
+      dockerfile: Dockerfile
+    container_name: auth
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    restart: always
+    profiles:
+      - sg_backend
+    env_file:
+      - ../services/auth/.env
+
+  users:
+    build:
+      context: ../services/users
+      dockerfile: Dockerfile
+    container_name: users
+    ports:
+      - "8090:8080"
+    networks:
+      - app-network
+    restart: always
+    profiles:
+      - sg_backend
+    env_file:
+      - ../services/users/.env
+
+networks:
+  app-network:
+    driver: bridge

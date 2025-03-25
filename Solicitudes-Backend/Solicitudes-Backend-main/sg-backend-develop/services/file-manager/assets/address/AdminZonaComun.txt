@@ -1,0 +1,10 @@
+DOMICILIO DECLARADO Y ACREDITACIÓN DE TITULARIDAD O LEGITIMACIÓN 
+En el marco del presente expediente, declaro que el domicilio del inmueble objeto de la solicitud de Aviso de Obra es el siguiente:
+
+Calle {street}, numeración {number}, del Partido de San Isidro, identificado bajo el Número de ABL {ablNumber}.
+
+Asimismo, en mi calidad de Administrador del Consorcio del inmueble referido, en el día de la fecha, acompaño la siguiente documentación destinada a acreditar legitimación suficiente para el presente trámite:
+1) Reglamento de Copropiedad y Administración, incorporado a estas actuaciones como GEDO N° {ifNumberRule}.
+2) Acta de designación del administrador del consorcio vigente, incorporado a estas actuaciones como GEDO N° {ifNumberAdmin}.
+
+Por último, tomo conocimiento de que la información y documentación presentada será verificada a efectos de garantizar el cumplimiento de los requisitos del presente trámite y declaro que lo aportado es preciso y auténtico, asumiendo total responsabilidad por su veracidad.

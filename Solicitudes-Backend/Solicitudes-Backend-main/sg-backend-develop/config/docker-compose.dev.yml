@@ -1,0 +1,285 @@
+version: "3.8"
+
+services:
+  sg_auth:
+    container_name: "sg_auth"
+    build:
+      context: ..
+      dockerfile: config/Dockerfile.dev
+    image: "sg_auth:${APP_VERSION}"
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "${AUTH_WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+      - "${AUTH_DELVE_PORT}:${DELVE_PORT}"
+    volumes:
+      - type: bind
+        source: ..
+        target: /app
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - BUILDING_FILES=/app/services/auth/cmd/main.go
+      - APP_NAME=sg_auth
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ENDPOINT=http://localstack:${AWS_EDGE_PORT}
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    restart: on-failure
+    profiles:
+      - sg_backend
+    command: air -c ${AIR_CONFIG}
+
+  sg_users:
+    container_name: "sg_users"
+    build:
+      context: ..
+      dockerfile: config/Dockerfile.dev
+    image: "sg_users:${APP_VERSION}"
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "${USERS_WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+      - "${USERS_DELVE_PORT}:${DELVE_PORT}"
+    volumes:
+      - type: bind
+        source: ..
+        target: /app
+      - /var/run/docker.sock:/var/run/docker.sock
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - BUILDING_FILES=/app/services/users/cmd/main.go
+      - APP_NAME=sg_users
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ENDPOINT=http://localstack:${AWS_EDGE_PORT}
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    restart: on-failure
+    profiles:
+      - sg_backend
+    command: air -c ${AIR_CONFIG}    
+
+  sg_mailing:
+    container_name: "sg_mailing"
+    build:
+      context: ..
+      dockerfile: config/Dockerfile.dev
+    image: "sg_mailing:${APP_VERSION}"
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "${MAILING_WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+      - "${MAILING_DELVE_PORT}:${DELVE_PORT}"
+    volumes:
+      - type: bind
+        source: ..
+        target: /app
+      - /var/run/docker.sock:/var/run/docker.sock
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - BUILDING_FILES=/app/services/mailing/cmd/main.go
+      - APP_NAME=sg_mailing
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ENDPOINT=http://localstack:${AWS_EDGE_PORT}
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+    depends_on:
+      - postgres
+      - mailhog
+    networks:
+      - app-network
+    restart: on-failure
+    profiles:
+      - sg_backend
+    command: air -c ${AIR_CONFIG}
+
+  sg_requests:
+    container_name: "sg_requests"
+    build:
+      context: ..
+      dockerfile: config/Dockerfile.dev
+    image: "sg_requests:${APP_VERSION}"
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "${REQUESTS_WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+      - "${REQUESTS_DELVE_PORT}:${DELVE_PORT}"
+    volumes:
+      - type: bind
+        source: ..
+        target: /app
+      - /var/run/docker.sock:/var/run/docker.sock
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - BUILDING_FILES=/app/services/requests/cmd/main.go
+      - APP_NAME=sg_requests
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ENDPOINT=http://localstack:${AWS_EDGE_PORT}
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    restart: on-failure
+    profiles:
+      - sg_backend
+      - sg_requests
+    command: air -c ${AIR_CONFIG}    
+
+  sg_file_manager:
+    container_name: "sg_file_manager"
+    build:
+      context: ..
+      dockerfile: config/Dockerfile.dev
+    image: "sg_file_manager:${APP_VERSION}"
+    env_file:
+      - .env
+      - .env.local
+    ports:
+      - "${FILE_MANAGER_WEB_SERVER_PORT}:${WEB_SERVER_PORT}"
+      - "${FILE_MANAGER_DELVE_PORT}:${DELVE_PORT}"
+    volumes:
+      - type: bind
+        source: ..
+        target: /app
+      - /var/run/docker.sock:/var/run/docker.sock
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
+    environment:
+      - BUILDING_FILES=/app/services/file-manager/cmd/api/main.go
+      - APP_NAME=sg_file_manager
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION}
+      - AWS_ENDPOINT=http://localstack:${AWS_EDGE_PORT}
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    restart: on-failure
+    profiles:
+      - sg_backend
+    command: air -c ${AIR_CONFIG}
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    container_name: "mailhog"
+    ports:
+      - "${SMTP_PORT}:${SMTP_PORT}"
+      - "${MH_WEB_UI_PORT}:${MH_WEB_UI_PORT}"
+    networks:
+      - app-network
+    restart: on-failure
+    profiles:
+      - sg_backend
+
+  postgres:
+    image: postgres:16.3
+    container_name: postgres
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres-storage:/storage
+      - ./postgres-init:/docker-entrypoint-initdb.d
+    networks:
+      - app-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    profiles:
+      - sg_backend
+      - sg_requests
+
+  pgadmin:
+    image: dpage/pgadmin4:8.12
+    container_name: pgadmin
+    ports:
+      - "${PGADMIN_PORT}:${PGADMIN_TARGET_PORT}"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+    logging:
+      driver: "none"
+    depends_on:
+      - postgres
+    user: "5050:5050"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ./pgadmin-storage:/var/lib/pgadmin/storage
+    networks:
+      - app-network
+    restart: unless-stopped
+    command: 
+      - "/bin/sh"
+      - "-c"
+      - "chmod -R 0777 /var/lib/pgadmin/storage && /entrypoint.sh"
+    profiles:
+      - sg_backend
+      - sg_requests
+
+  migrations:
+    image: gomicro/goose:3.7.0
+    volumes:
+      - ./migrations:/app/migrations
+    environment:
+      - PGHOST=${POSTGRES_HOST}
+      - PGUSER=${POSTGRES_USER}
+      - PGPASSWORD=${POSTGRES_PASSWORD}
+      - PGDATABASE=${POSTGRES_DB}
+      - PGSSLMODE=disable
+    command: >
+      goose -dir /app/migrations postgres "host=${POSTGRES_HOST} user=${POSTGRES_USER} password=${POSTGRES_PASSWORD} dbname=${POSTGRES_DB} sslmode=disable" up
+    depends_on:
+      - postgres
+    networks:
+      - app-network
+    profiles:
+      - sg_backend
+      - sg_requests
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  pgadmin_data:

@@ -1,0 +1,8 @@
+ACTIVIDADES DECLARADAS PARA EL OTORGAMIENTO DEL AVISO DE OBRA
+En el marco del presente, informo que las tareas a desarrollar en el inmueble declarado son las siguientes:
+{tasks}. 
+Siendo la memoria descriptiva de la actividad a desarrollar la siguiente:
+“{projectDescription}”.
+Por otro lado, al tratarse de trabajos que involucran vallas, andamios, limpieza o pintura de fachadas o arreglos de techos que afecten la vía pública, acompaño una Póliza de seguro contra terceros y de responsabilidad civil por la duración de la obra y una Póliza de seguro de accidentes con cláusula de no repetición al Municipio de San Isidro, como GEDO N°{ifNumber}.
+Por otro lado, informo que el plazo estimado para la duración de la obra para la cual se solicita el presente trámite, es de {plazo} días.
+Por último, tomo conocimiento de que las actividades declaradas, en conjunto con el resto de la información y documentación suministrada, serán verificadas a efectos de garantizar el cumplimiento de los requisitos del presente trámite y declaro que lo aportado es preciso y auténtico, asumiendo total responsabilidad por su veracidad.

@@ -1,0 +1,36 @@
+linters-settings:
+  revive:
+    # Configura reglas específicas o utiliza configuraciones por defecto
+    severity: warning
+    rules:
+      - name: exported
+        severity: warning
+
+linters:
+  enable:
+    - revive
+    - unused
+    - govet
+    - errcheck
+    - gocritic
+  disable:
+    - golint  # Deshabilitado ya que está obsoleto
+    - deadcode  # Deshabilitado ya que está obsoleto
+
+run:
+  concurrency: 2
+  output:
+    format: colored-line-number
+    print-issued-lines: true
+
+issues:
+  exclude-rules:
+    - path: _test\.go$
+      linters:
+        - govet
+  new: true
+  new-from-rev: HEAD~
+
+performance:
+  max-same-issues: 3
+  max-issues-per-linter: 10

@@ -1,0 +1,25 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: file_manager
+    environment:
+      SCOPE: ${SCOPE}
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USER}
+      DB_PASS: ${DB_PASS}
+      DB_NAME: ${DB_NAME}
+      RECORD_CODE: ${RECORD_CODE}
+      RECORD_REASON: ${RECORD_REASON}
+      BASE_URL_GDE: ${BASE_URL_GDE}
+      EMAIL: ${EMAIL}
+      PASS: ${PASS}
+    ports:
+      - "8080:8080"
+    networks:
+      - config_app-network # IMPORTANTE: usa el nombre exacto
+
+networks:
+  config_app-network: # IMPORTANTE: usa el nombre exacto
+    external: true

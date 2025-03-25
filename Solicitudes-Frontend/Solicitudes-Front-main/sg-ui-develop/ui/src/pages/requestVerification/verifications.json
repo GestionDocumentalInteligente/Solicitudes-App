@@ -1,0 +1,324 @@
+[
+  {
+    "record": "2024-000030",
+    "requestType": "Aviso de obra",
+    "documentType": "Potestad sobre el inmueble",
+    "deliveryDate": "01/10/2024",
+    "status": "pending",
+    "documents": [
+      {
+        "id": "1",
+        "title": "Titulo de propiedad o informe de dominio",
+        "code": "IF-2024-4494357-SI-MDSI",
+        "sections": [
+          {
+            "id": "document",
+            "title": "Documentación",
+            "status": null,
+            "question": "¿El documento cuenta con las características propias de un titulo de propiedad o Informe de dominio?",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no cumple con las características necesarias de un título de propiedad porque [especificar razón]. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "address",
+            "title": "Dirección",
+            "status": null,
+            "question": "Ramón Falcón 2021, UF4, Beccar",
+            "observationPlaceholder": "Ejemplo: \"La dirección ingresada no coincide con la dirección del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "name",
+            "title": "Nombre y Apellido",
+            "status": null,
+            "question": "Pablo Perez",
+            "observationPlaceholder": "Ejemplo: \"El nombre y apellido ingresado no coincide con el nombre y apellido del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "record": "2024-000031",
+    "requestType": "Aviso de obra",
+    "documentType": "Potestad sobre el inmueble",
+    "deliveryDate": "02/10/2024",
+    "status": "pending",
+    "documents": [
+      {
+        "id": "1",
+        "title": "Titulo de propiedad o informe de dominio",
+        "code": "IF-2024-4494357-SI-MDSI",
+        "sections": [
+          {
+            "id": "document",
+            "title": "Documentación",
+            "status": null,
+            "question": "¿El documento presentado cuenta con las características propias de un Reglamento de copropiedad?",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no cumple con las características necesarias de un reglamento de copropiedad porque [especificar razón]. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "address",
+            "title": "Dirección",
+            "status": null,
+            "question": "Ramón Falcón 2021, UF4, Beccar",
+            "observationPlaceholder": "Ejemplo: \"La dirección ingresada no coincide con la dirección del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "name",
+            "title": "Nombre y Apellido",
+            "status": null,
+            "question": "Pablo Perez",
+            "observationPlaceholder": "Ejemplo: \"El nombre y apellido ingresado no coincide con el nombre y apellido del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Reglamento de Co-propiedad",
+        "code": "IF-2024-4494357-SI-MDSI",
+        "sections": [
+          {
+            "id": "document",
+            "title": "Documentación",
+            "status": null,
+            "question": "¿El documento presentado cuenta con las características propias de un Acta de Designación?*",
+            "questionClarification": "*Si el Reglamento de Copropiedad establece la designación del administrador y el mandato se encuentra vigente, dicho documento sería suficiente para acreditar su rol.",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no cumple con las características necesarias de un reglamento de copropiedad porque [especificar razón]. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "address",
+            "title": "Dirección",
+            "status": null,
+            "question": "Ramón Falcón 2021, UF4, Beccar",
+            "observationPlaceholder": "Ejemplo: \"La dirección ingresada no coincide con la dirección del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "name",
+            "title": "Nombre y Apellido",
+            "status": null,
+            "question": "Pablo Perez",
+            "observationPlaceholder": "Ejemplo: \"El nombre y apellido ingresado no coincide con el nombre y apellido del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "validity",
+            "title": "Vigencia",
+            "status": null,
+            "question": "¿Tiene vigencia al día de la fecha?",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no se encuentra vigente. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "record": "2024-000032",
+    "requestType": "Aviso de obra",
+    "documentType": "Potestad sobre el inmueble",
+    "deliveryDate": "03/10/2024",
+    "status": "pending",
+    "documents": [
+      {
+        "id": "1",
+        "title": "Autorización propietario",
+        "code": "IF-2024-4494357-SI-MDSI",
+        "sections": [
+          {
+            "id": "document",
+            "title": "Documentación",
+            "status": null,
+            "question": "¿El documento cuenta con las características propias de una Autorización del propietario?",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no cumple con las características necesarias de una autorización del propietario porque [especificar razón]. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "address",
+            "title": "Dirección",
+            "status": null,
+            "question": "Ramón Falcón 2021, UF4, Beccar",
+            "observationPlaceholder": "Ejemplo: \"La dirección ingresada no coincide con la dirección del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "grantedByAuth",
+            "title": "Autorización otorgada por",
+            "status": null,
+            "observationPlaceholder": "Ejemplo: \"El nombre y apellido ingresado no coincide con el nombre y apellido del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "inputType": "text",
+            "inputPlaceholder": "Escribir el nombre y apellido de la persona que firma la autorización",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "grantedToAuth",
+            "title": "Autorización otorgada a",
+            "status": null,
+            "question": "Pablo Perez",
+            "observationPlaceholder": "Ejemplo: \"El nombre y apellido ingresado no coincide con el nombre y apellido del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Titulo de propiedad o informe de dominio",
+        "code": "IF-2024-4494357-SI-MDSI",
+        "sections": [
+          {
+            "id": "document",
+            "title": "Documentación",
+            "status": null,
+            "question": "¿El documento presentado reúne las características propias de un título de propiedad?",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no cumple con las características necesarias de un título de propiedad porque [especificar razón]. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "address",
+            "title": "Dirección",
+            "status": null,
+            "question": "Ramón Falcón 2021, UF4, Beccar",
+            "observationPlaceholder": "Ejemplo: \"La dirección ingresada no coincide con la dirección del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "name",
+            "title": "Nombre y Apellido",
+            "status": null,
+            "question": "Should be grantedByAuth name",
+            "observationPlaceholder": "Ejemplo: \"El nombre y apellido ingresado no coincide con el nombre y apellido del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "record": "2024-000033",
+    "requestType": "Aviso de obra",
+    "documentType": "Tareas a realizar",
+    "deliveryDate": "04/10/2024",
+    "status": "pending",
+    "documents": [
+      {
+        "id": "1",
+        "title": "Titulo de propiedad o informe de dominio",
+        "content": {
+          "descriptiveMemory": "[Se procederá a cambiar el material de la cubierta de techo sin modificar la estructura existente, reemplazando las tejas actuales por chapas de zinc. Además, se realizará el revoque exterior en las paredes del frente del inmueble para mejorar la protección y el acabado, sin afectar la estructura.]",
+          "assignedTask": "Arreglos en general de las instalaciones complementarias del inmueble (agua, cloaca, electricidad, entre otros).",
+          "estimatedTime": "30 días",
+          "requiresInsurance": "Si"
+        },
+        "sections": [
+          {
+            "id": "task",
+            "title": "Tarea asignada",
+            "status": null,
+            "question": "¿La tarea asignada coincide con la memoria descriptiva?",
+            "observationOptions": [
+              "Ejecutar solados",
+              "Cambiar revestimientos",
+              "Terraplenar y rellenar terrenos",
+              "Cambiar el material de cubierta de techos",
+              "Ejecutar cielorrasos",
+              "Revocar cercas al frente",
+              "Ejecutar revoques exteriores o trabajos similares",
+              "Limpiar o pintar las fachadas principales"
+            ],
+            "selectedOptions": [],
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "insurance",
+            "title": "Seguro",
+            "status": null,
+            "question": "¿La tarea seleccionada requiere seguro?",
+            "questionClarification": "En caso de requerir, es necesario que el responsable adjunte una póliza de seguro.",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no cumple con las características necesarias de un reglamento de copropiedad porque [especificar razón]. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "inputType": "radio",
+            "inputOptions": [
+              "Si",
+              "No"
+            ],
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Póliza de seguro",
+        "code": "IF-2024-4494357-SI-MDSI",
+        "sections": [
+          {
+            "id": "address",
+            "title": "Dirección",
+            "status": null,
+            "question": "Ramón Falcón 2021, UF4, Beccar",
+            "observationPlaceholder": "Ejemplo: \"La dirección ingresada no coincide con la dirección del documento adjuntado. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": true
+          },
+          {
+            "id": "clause",
+            "title": "Cláusula",
+            "status": null,
+            "question": "¿El documento incluye una cláusula de no repetición contra la municipalidad?",
+            "observationPlaceholder" : "Ejemplo: \"El documento adjuntado no incluye una cláusula de no repetición contra la municipalidad. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          },
+          {
+            "id": "validity",
+            "title": "Vigencia",
+            "status": null,
+            "question": "¿La vigencia de la póliza cubre el período de [tiempo_estimado_de_ejecución] días declarados por el vecino?",
+            "observationPlaceholder": "Ejemplo: \"El documento adjuntado no se encuentra vigente. Por favor, revise y cargue el documento correspondiente. Gracias.\"",
+            "isExpanded": false,
+            "show": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "record": "2024-000036",
+    "requestType": "Aviso de obra",
+    "documentType": "Potestad sobre el inmueble",
+    "deliveryDate": "22/10/2024",
+    "status": "verified",
+    "documents": []
+  },
+  {
+    "record": "2024-000037",
+    "requestType": "Aviso de obra",
+    "documentType": "Potestad sobre el inmueble",
+    "deliveryDate": "24/10/2024",
+    "status": "observed",
+    "documents": []
+  }
+]

@@ -1,0 +1,20 @@
+Términos y Condiciones de Uso del Sistema 
+Los términos y condiciones que se detallan a continuación regulan el acceso y la utilización del sistema de gestión municipal y de los servicios que se ofrecen a través del mismo:
+
+1. Definiciones:
+Usuario: Persona que accede al sistema de gestión municipal a través de la página web correspondiente y utiliza los servicios para gestionar trámites a distancia.
+Cuenta de Usuario: Es el escritorio virtual a través del cual el usuario puede iniciar trámites, realizar presentaciones y acceder a sus tareas, documentos, notificaciones y comunicaciones. La cuenta de usuario se presume propia, por lo que el usuario no podrá alegar en ningún caso desconocimiento de las tareas, comunicaciones o notificaciones efectuadas en la misma.
+2. Autenticación y Acceso:
+El acceso al sistema de gestión municipal se realiza mediante la Clave Fiscal otorgada por la Administración Federal de Ingresos Públicos (AFIP), a través de la Agencia Nacional de la Seguridad Social (ANSES) o Mi Argentina, utilizando la plataforma de autenticación denominada “AUTENTICAR”. La administración y control de los mecanismos de acceso, ya sea a través de Clave Fiscal, ANSES o Mi Argentina, es responsabilidad exclusiva de las entidades correspondientes, y cualquier inconveniente relacionado con dichos accesos deberá ser resuelto por el usuario directamente con la entidad que lo haya provisto.
+3. Responsabilidad del Usuario:
+El usuario es el único responsable de la protección y uso adecuado de su Clave. Cualquier actividad realizada en la cuenta de usuario se presume efectuada por el titular de la cuenta, por lo que el usuario no podrá alegar desconocimiento de las gestiones realizadas. 
+4. Uso del Sistema:
+El usuario se compromete a cumplir con los requisitos técnicos y operativos necesarios para el correcto uso del sistema de gestión municipal. La carga de documentación relacionada con los trámites puede realizarse las 24 horas del día, los 365 días del año. Una vez cargada la documentación, el sistema otorgará un número de expediente y la carga será considerada efectuada correctamente cuando el servidor de la Administración confirme el registro del trámite. El cómputo de plazos comenzará a partir del primer día hábil siguiente al de la carga de la documentación, y en caso de ser realizada en un día inhábil, se considerará efectuada el primer día hábil posterior.
+5. Administración del Sistema:
+El sistema es administrado por la Municipalidad de San Isidro. Las deficiencias que afecten el uso del sistema originadas en el incumplimiento de los requisitos técnicos y de funcionamiento por parte del usuario serán de su exclusiva responsabilidad, sin que la Administración asuma responsabilidad alguna por situaciones no imputables al correcto funcionamiento de la plataforma.
+6. Facultades de la Administración:
+Suspensión o Revocación del Acceso: El incumplimiento de los presentes términos y condiciones facultará a la Administración para suspender o revocar el acceso al sistema de gestión municipal.
+Modificación de los Términos y Condiciones: La Administración se reserva el derecho de modificar los términos y condiciones generales y/o particulares en cualquier momento, debiendo informar a los usuarios sobre dichas modificaciones.
+7. Seguridad del Sistema:
+La Administración adopta medidas técnicas y controles de seguridad adecuados para garantizar la confidencialidad de la información contenida en las cuentas de usuario del sistema de gestión municipal. Sin embargo, no será responsable por daños o perjuicios que pudieran ocasionarse por el uso indebido o la manipulación de las cuentas por parte del propio usuario o terceros no autorizados
+Declaro que he leído, comprendido y acepto los presentes Términos y Condiciones de Uso del sistema de gestión municipal, prestando mi conformidad a todas las disposiciones establecidas en el mismo.

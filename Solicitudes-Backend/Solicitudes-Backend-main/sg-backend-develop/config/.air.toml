@@ -1,0 +1,23 @@
+root = "."
+tmp_dir = "tmp"  # Simplificado, no necesita ./
+
+[build]
+  # Comando de compilación simplificado
+  cmd = "go build -gcflags='all=-N -l' -o ./tmp/${APP_NAME} ${BUILDING_FILES}"
+  bin = "./tmp/${APP_NAME}"
+
+  # Configuración de Delve para debugging
+  full_bin = "dlv exec --accept-multiclient --headless --listen :${DELVE_PORT} --api-version 2 ./tmp/${APP_NAME}"
+
+  # Optimización de rendimiento
+  delay = 1000
+  
+  # Exclusiones esenciales
+  exclude_dir = ["tmp", "vendor", "testdata"]
+  exclude_regex = ["_test.go"]
+  
+  # Solo incluir archivos relevantes
+  include_ext = ["go"]
+
+  # Log solo si es necesario para debugging
+  log = "build-errors.log"

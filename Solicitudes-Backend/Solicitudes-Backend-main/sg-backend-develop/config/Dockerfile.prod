@@ -1,0 +1,18 @@
+FROM golang:1.23-alpine
+
+ENV TZ=America/Argentina/Buenos_Aires
+RUN apk add --no-cache tzdata
+
+WORKDIR /app
+
+COPY . .
+
+RUN go mod download && go mod verify
+
+# Build both services
+# RUN go build -o sg_auth ./services/auth/cmd/main.go && \
+#     go build -o sg_users ./services/users/cmd/main.go && \
+#     go build -o sg_mailing ./services/mailing/cmd/main.go && \
+#     go build -o sg_file_manager ./services/file-manager/cmd/api/main.go
+RUN go build -o sg_requests ./services/requests/cmd/main.go
+
